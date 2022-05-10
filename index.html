@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>CoreUI - Bootstrap Admin Template</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+        <!-- Datatables CSS -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" />
+
+        <!-- Vendors styles-->
+        <link rel="stylesheet" href="plugins/simplebar/dist/simplebar.css" />
+
+        <!-- Main styles-->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/site.css" />
+
+        <!-- Fontawesome 6 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+        <!-- Jquery -->
+        <script src="plugins/jquery/jquery-3.6.0.min.js"></script>
+
+        <!-- Chart JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+        <!-- Core UI Scripts -->
+        <script defer src="plugins/coreui-comp/coreui/dist/js/coreui.bundle.js"></script>
+        <script defer src="plugins/simplebar/dist/simplebar.min.js"></script>
+        <script defer src="plugins/coreui-comp/utils/dist/coreui-utils.js"></script>
+
+        <!-- Datatables Scripts -->
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+
+        <script defer src="js/site.js"></script>
+    </head>
+    <body>
+        <div class="sidebar sidebar-dark sidebar-fixed min-vh-100" id="sidebar">
+            <div class="sidebar-brand d-none d-md-flex">
+                <img class="sidebar-brand-full" src="assets/svg/icon-logo-full.svg" alt="" />
+                <img class="sidebar-brand-narrow" src="assets/svg/icon-logo-narrow.svg" alt="" />
+            </div>
+            <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fa-solid fa-gauge"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-title">TITLE 1</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fa-solid fa-user-group"></i>
+                        Employees
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fa-solid fa-building"></i>
+                        Department
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fa-solid fa-location"></i>
+                        Designation
+                    </a>
+                </li>
+                <li class="nav-title">TITLE 2</li>
+                <li class="nav-group">
+                    <a class="nav-link nav-group-toggle" href="#">
+                        <i class="nav-icon fa-solid fa-dice"></i>
+                        Miscellaneous
+                    </a>
+                    <ul class="nav-group-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Option A</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Option B</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Option C</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Option D</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-title">TITLE 3</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fa-solid fa-question-circle"></i>
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fa-solid fa-address-book"></i>
+                        Contacts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fa-solid fa-info"></i>
+                        Resources
+                    </a>
+                </li>
+            </ul>
+            <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+        </div>
+        <div class="wrapper d-flex flex-column bg-light">
+            <header class="header header-sticky mb-4 shadow-sm">
+                <div class="container-fluid">
+                    <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <a class="header-brand" href="#"></a>
+                    <ul class="header-nav d-md-flex">
+                        <li class="nav-item">
+                            <input class="form-control" type="search" placeholder="Search" />
+                        </li>
+                    </ul>
+                    <ul class="header-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="icon icon-lg fa-solid fa-bell"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header-nav ms-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <div class="avatar">
+                                    <img class="avatar-img" src="assets/avatars/user1.PNG" alt="" />
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end pt-0">
+                                <div class="dropdown-header bg-light py-2">
+                                    <div class="fw-semibold">Account</div>
+                                </div>
+                                <a class="dropdown-item" href="#"> Updates<span class="badge badge-sm bg-info ms-2">42</span></a
+                                ><a class="dropdown-item" href="#"> Messages<span class="badge badge-sm bg-success ms-2">42</span></a
+                                ><a class="dropdown-item" href="#"> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a
+                                ><a class="dropdown-item" href="#"> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
+                                <div class="dropdown-header bg-light py-2">
+                                    <div class="fw-semibold">Settings</div>
+                                </div>
+                                <a class="dropdown-item" href="#"> Profile</a><a class="dropdown-item" href="#"> Settings</a><a class="dropdown-item" href="#"> Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a>
+                                <a class="dropdown-item" href="#"> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"> Lock Account</a><a class="dropdown-item" href="#"> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-divider"></div>
+                <div class="container-fluid">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb my-0 ms-2">
+                            <li class="breadcrumb-item">
+                                <span>Home</span>
+                            </li>
+                            <li class="breadcrumb-item active"><span>Dashboard</span></li>
+                        </ol>
+                    </nav>
+                </div>
+            </header>
+            <main class="main">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Overview</h3>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="card h-100">
+                                        <canvas class="w-100" id="multipleLines"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4>Information</h4>
+                                            <hr />
+                                            <div class="progress-group">
+                                                <div class="progress-group-header">
+                                                    <div>Male</div>
+                                                    <div class="ms-auto font-weight-bold">43%</div>
+                                                </div>
+                                                <div class="progress-group-bars">
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-info w-25" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="progress-group-header align-items-end">
+                                                    <div>Female</div>
+                                                    <div class="ms-auto font-weight-bold me-2">75%</div>
+                                                </div>
+                                                <div class="progress-group-bars">
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-info w-75" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="progress-group-header align-items-end">
+                                                    <div>Other</div>
+                                                    <div class="ms-auto font-weight-bold me-2">50%</div>
+                                                </div>
+                                                <div class="progress-group-bars">
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-info w-50" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5>Recent Logs</h5>
+                                            <hr />
+                                            <ul>
+                                                <li>Lorem ipsum dolor sit amet.</li>
+                                                <li>Ducimus harum expedita labore. Illum?</li>
+                                                <li>Nihil ullam dolor laudantium voluptatibus?</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-sm-6 col-lg-4 h-100">
+                                    <div class="card p-0" style="--cui-card-cap-bg: #3b5998">
+                                        <div class="card-header py-lg-5 position-relative d-flex justify-content-center align-items-center">
+                                            <i class="fa-brands fa-facebook-f text-light icon icon-3xl"></i>
+                                        </div>
+                                        <div class="card-body row text-center">
+                                            <div class="col">
+                                                <div class="fs-5 fw-semibold">89k</div>
+                                                <div class="text-uppercase text-medium-emphasis small">friends</div>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="col">
+                                                <div class="fs-5 fw-semibold">459</div>
+                                                <div class="text-uppercase text-medium-emphasis small">feeds</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4 h-100">
+                                    <div class="card p-0" style="--cui-card-cap-bg: #00aced">
+                                        <div class="card-header py-lg-5 position-relative d-flex justify-content-center align-items-center">
+                                            <i class="fa-brands fa-twitter text-light icon icon-3xl"></i>
+                                        </div>
+                                        <div class="card-body row text-center">
+                                            <div class="col">
+                                                <div class="fs-5 fw-semibold">973k</div>
+                                                <div class="text-uppercase text-medium-emphasis small">followers</div>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="col">
+                                                <div class="fs-5 fw-semibold">1.792</div>
+                                                <div class="text-uppercase text-medium-emphasis small">tweets</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4 h-100">
+                                    <div class="card p-0" style="--cui-card-cap-bg: #4875b4">
+                                        <div class="card-header py-lg-5 position-relative d-flex justify-content-center align-items-center">
+                                            <i class="fa-brands fa-linkedin text-light icon icon-3xl"></i>
+                                        </div>
+                                        <div class="card-body row text-center">
+                                            <div class="col">
+                                                <div class="fs-5 fw-semibold">500+</div>
+                                                <div class="text-uppercase text-medium-emphasis small">contacts</div>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="col">
+                                                <div class="fs-5 fw-semibold">292</div>
+                                                <div class="text-uppercase text-medium-emphasis small">feeds</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header py-3 bg-transparent d-flex justify-content-between align-items-center">
+                            <h4 class="m-0">EMPLOYEES</h4>
+                            <button class="btn btn-sm btn-primary" data-coreui-toggle="modal" data-coreui-target="#addEmployeeModal"><i class="fa-solid fa-plus"></i> Add Employees</button>
+                        </div>
+                        <div class="card-body">
+                            <table id="employeeTbl" class="table row-border order-column w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="sticky-col">First name</th>
+                                        <th>Last name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                        <th>Extn.</th>
+                                        <th>Address</th>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="sticky-col">
+                                            <div class="avatar">
+                                                <img class="avatar-img" src="/assets/avatars/user1.PNG" alt="user@email.com" />
+                                            </div>
+                                            Bruno
+                                        </td>
+                                        <td>Nash</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td>38</td>
+                                        <td>2011/05/03</td>
+                                        <td>$163,500</td>
+                                        <td>6222</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur.</td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sticky-col">
+                                            <div class="avatar">
+                                                <img class="avatar-img" src="/assets/avatars/user4.PNG" alt="user@email.com" />
+                                            </div>
+                                            Sam
+                                        </td>
+                                        <td>Yamamoto</td>
+                                        <td>Support Engineer</td>
+                                        <td>Tokyo</td>
+                                        <td>37</td>
+                                        <td>2009/08/19</td>
+                                        <td>$139,575</td>
+                                        <td>9383</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur.</td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sticky-col">
+                                            <div class="avatar">
+                                                <img class="avatar-img" src="/assets/avatars/user2.PNG" alt="user@email.com" />
+                                            </div>
+                                            Thor
+                                        </td>
+                                        <td>Walton</td>
+                                        <td>Developer</td>
+                                        <td>New York</td>
+                                        <td>61</td>
+                                        <td>2013/08/11</td>
+                                        <td>$98,540</td>
+                                        <td>8327</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur.</td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sticky-col">
+                                            <div class="avatar">
+                                                <img class="avatar-img" src="/assets/avatars/user3.PNG" alt="user@email.com" />
+                                            </div>
+                                            Finn
+                                        </td>
+                                        <td>Camacho</td>
+                                        <td>Support Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>47</td>
+                                        <td>2009/07/07</td>
+                                        <td>$87,500</td>
+                                        <td>2927</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur.</td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sticky-col">
+                                            <div class="avatar">
+                                                <img class="avatar-img" src="/assets/avatars/user5.PNG" alt="user@email.com" />
+                                            </div>
+                                            Zenaida
+                                        </td>
+                                        <td>Frank</td>
+                                        <td>Software Engineer</td>
+                                        <td>New York</td>
+                                        <td>63</td>
+                                        <td>2010/01/04</td>
+                                        <td>$125,250</td>
+                                        <td>7439</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur.</td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header py-3 bg-transparent d-flex justify-content-between align-items-center">
+                            <h4 class="m-0">TASKS</h4>
+                            <button class="btn btn-sm btn-primary" data-coreui-toggle="modal" data-coreui-target="#addTasksModal"><i class="fa-solid fa-plus"></i> Create New Tasks</button>
+                        </div>
+                        <div class="card-body">
+                            <table class="table row-border order-column w-100">
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Status</th>
+                                        <th>People</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>New Server Installation</td>
+                                        <td><span class="badge bg-light text-dark">On hold</span></td>
+                                        <td>
+                                            <div class="avatars-stack">
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user1.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user2.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user3.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user4.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user5.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar bg-light text-dark">+2</div>
+                                            </div>
+                                        </td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bug Fixing on Controller</td>
+                                        <td><span class="badge bg-warning">On going</span></td>
+                                        <td>
+                                            <div class="avatars-stack">
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user4.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user1.PNG" alt="user@email.com" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Server Optimization</td>
+                                        <td><span class="badge bg-success">Finished</span></td>
+                                        <td>
+                                            <div class="avatars-stack">
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user3.PNG" alt="user@email.com" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Software Update to DEPT1C2 PCs</td>
+                                        <td><span class="badge bg-danger">Stopped</span></td>
+                                        <td>
+                                            <div class="avatars-stack">
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user1.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user2.PNG" alt="user@email.com" />
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="avatar-img" src="/assets/avatars/user3.PNG" alt="user@email.com" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="sticky-col">
+                                            <button class="btn btn-sm btn-ghost-dark rounded-circle">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-info rounded-circle">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-ghost-danger rounded-circle">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer bg-white mt-3 py-4">
+                    <div>
+                        <a>HRIS</a>
+                        <span>&copy; 2021 creativeLabs.</span>
+                    </div>
+                    <div>
+                        <span>Powered by</span>
+                        <a>ASP.NET Framework MVC</a>
+                    </div>
+                </footer>
+            </main>
+            <!-- Modal -->
+            <div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addEmployeeModalLabel">Add Employee</h5>
+                            <a type="button" data-coreui-dismiss="modal" aria-label="Close">
+                                <i class="fa-solid fa-times"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="">First Name</label>
+                                    <input class="form-control form-control-sm" type="text" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="">Last Name</label>
+                                    <input class="form-control form-control-sm" type="text" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="">Gender</label>
+                                    <select class="form-control form-control-sm" name="" id="">
+                                        <option value="">Male</option>
+                                        <option value="">Female</option>
+                                        <option value="">Not Specified</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">Email Address</label>
+                                    <input class="form-control form-control-sm" type="email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Address</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">Department</label>
+                                    <select class="form-control form-control-sm" name="" id="">
+                                        <option value="">Department A</option>
+                                        <option value="">Department B</option>
+                                        <option value="">Department C</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-coreui-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-sm btn-success">Add Employee</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
