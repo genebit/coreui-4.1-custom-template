@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-    --cui-primary: #3F70CF;
+    --cui-primary: #3f70cf;
     --cui-secondary: rgb(64, 185, 149);
     --cui-success: rgb(74, 186, 64);
     --cui-info: rgb(51, 153, 255);
@@ -13653,5 +13653,3 @@ html:not([dir="rtl"]) .wrapper {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-
-/*# sourceMappingURL=style.css.map */
