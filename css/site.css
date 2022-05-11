@@ -5,8 +5,12 @@
 }
 .nav-link,
 td,
+label,
 .breadcrumb * {
     font-size: 0.85rem;
+}
+label {
+    font-weight: 600;
 }
 .card {
     border-radius: 8px;
