@@ -1,3 +1,15 @@
+$(document).ready(function () {
+    // $(".departmentSelect").one("select2:open", function (e) {
+    //     $("input.select2-search__field").prop("placeholder", "Search here...")
+    // })
+    $(".tagsSelect").select2()
+
+    $(".genderSelect").select2({
+        minimumResultsForSearch: -1,
+    })
+    $(".departmentSelect").select2()
+})
+
 var table = $("table").DataTable({
     scrollY: "300px",
     scrollX: true,

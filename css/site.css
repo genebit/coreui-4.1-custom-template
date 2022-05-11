@@ -1,5 +1,11 @@
+@media (max-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+}
 .nav-link,
-td {
+td,
+.breadcrumb * {
     font-size: 0.85rem;
 }
 .card {
@@ -7,31 +13,42 @@ td {
     padding: 2rem 5px;
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
 }
-.sticky-col:first-child,
-.sticky-col:first-child {
+
+.sticky-col {
     position: sticky !important;
     background-color: white !important;
-    box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.15);
-    left: 0;
     z-index: 10;
 }
+.sticky-col:first-child {
+    box-shadow: 3px 0 2px 0 rgba(0, 0, 0, 0.15);
+    left: 0;
+}
 .sticky-col:last-child {
-    position: sticky !important;
-    background-color: white !important;
-    box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.15);
+    width: 3rem;
+    box-shadow: -3px 0 2px 0 rgba(0, 0, 0, 0.15);
     right: 0;
 }
 .progress,
 .progress-bar {
     height: 0.5rem;
 }
-@media (max-width: 992px) {
-    .container {
-        max-width: 100%;
-    }
-}
+/* Simplebar */
 .simplebar-content {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+}
+/* Select2 */
+.modal-open .select2-container {
+    z-index: 9999;
+}
+.select2 {
+    width: 100% !important;
+}
+.select2-selection {
+    height: auto !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: transparent !important;
+    color: var(--cui-dark);
 }
