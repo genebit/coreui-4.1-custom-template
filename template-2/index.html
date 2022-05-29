@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+		<!-- Main styles-->
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/site.css" />
+
+		<link rel="stylesheet" href="../plugins/coreui-comp/icons/css/all.min.css" />
+
+		<!-- Jquery -->
+		<script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+
+		<!-- Core UI Scripts -->
+		<script defer src="../plugins/coreui-comp/coreui/dist/js/coreui.bundle.js"></script>
+		<script defer src="../plugins/simplebar/dist/simplebar.min.js"></script>
+		<script defer src="../plugins/coreui-comp/utils/dist/coreui-utils.js"></script>
+	</head>
+	<body>
+		<header class="header shadow-sm">
+			<div class="container-fluid">
+				<button class="header-toggler" type="button" id="nav-toggler">
+					<i class="cil-hamburger-menu"></i>
+				</button>
+				<ul class="header-nav d-md-flex">
+					<li class="nav-item">
+						<input class="form-control form-control-sm" type="search" placeholder="Search" />
+					</li>
+				</ul>
+				<ul class="header-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="icon icon-lg cil-bell"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="header-nav ms-3">
+					<li class="nav-item dropdown">
+						<a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<div class="avatar">
+								<img class="avatar-img" src="../assets/avatars/user1.PNG" alt="" />
+							</div>
+							<span>Bruno Nash</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-end pt-0">
+							<div class="dropdown-header bg-light py-2">
+								<div class="fw-semibold">Account</div>
+							</div>
+							<a class="dropdown-item" href="#"> Updates<span class="badge badge-sm bg-info ms-2">42</span></a
+							><a class="dropdown-item" href="#"> Messages<span class="badge badge-sm bg-success ms-2">42</span></a
+							><a class="dropdown-item" href="#"> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a
+							><a class="dropdown-item" href="#"> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
+							<div class="dropdown-header bg-light py-2">
+								<div class="fw-semibold">Settings</div>
+							</div>
+							<a class="dropdown-item" href="#"> Profile</a><a class="dropdown-item" href="#"> Settings</a><a class="dropdown-item" href="#"> Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a>
+							<a class="dropdown-item" href="#"> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#"> Lock Account</a><a class="dropdown-item" href="#"> Logout</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="header-divider"></div>
+			<div class="container-fluid">
+				<nav style="--cui-breadcrumb-divider: '/'" aria-label="breadcrumb">
+					<ol class="breadcrumb my-0 ms-2">
+						<li class="breadcrumb-item">
+							<span>Home</span>
+						</li>
+						<li class="breadcrumb-item active"><span>Dashboard</span></li>
+					</ol>
+				</nav>
+			</div>
+		</header>
+		<div class="wrapper d-flex flex-row bg-light">
+			<div class="sidebar sidebar-dark min-vh-100" id="sidebar">
+				<ul class="sidebar-nav" data-coreui="navigation">
+					<li class="nav-item">
+						<a class="nav-link" href="/">
+							<i class="nav-icon cil-gauge"></i>
+							Dashboard
+						</a>
+					</li>
+
+					<li class="nav-title">TITLE 3</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/">
+							<i class="nav-icon cil-double-quote-sans-left"></i>
+							About
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/">
+							<i class="nav-icon cil-address-book"></i>
+							Contacts
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/">
+							<i class="nav-icon cil-book"></i>
+							Resources
+						</a>
+					</li>
+				</ul>
+			</div>
+			<main class="main p-3">
+				molestiae commodi, cum fuga temporibus sed in aspernatur aperiam sequi velit consectetur a consequuntur nostrum est. Ut odio vitae consectetur? Aliquid maiores eaque dignissimos dicta totam commodi fugiat libero. Iusto quisquam eius, cum vel explicabo et libero corporis impedit veritatis odit non harum natus adipisci aliquid nobis alias recusandae. Commodi dolorem ab veritatis atque pariatur. Maxime omnis ab minus eos ullam, placeat, tenetur nihil molestiae nesciunt nemo vitae
+				aspernatur culpa sint cupiditate ad, neque voluptatem perspiciatis voluptatum animi voluptates deleniti error cum nam! Reiciendis velit, quaerat recusandae tempora repudiandae deserunt minus error amet sequi beatae eius eligendi ipsam alias. Ratione earum modi dolorum consequuntur?
+			</main>
+		</div>
+		<script>
+			$("#nav-toggler").click(() => {
+				if ($(window).width() < 768) {
+					coreui.Sidebar.getInstance($("#sidebar")).toggle()
+					return
+				}
+				$("#sidebar").hasClass("hide") ? coreui.Sidebar.getInstance($("#sidebar")).show() : coreui.Sidebar.getInstance($("#sidebar")).hide()
+			})
+		</script>
+	</body>
+</html>
