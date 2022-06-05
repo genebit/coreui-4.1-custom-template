@@ -1,0 +1,13 @@
+/* Simplebar */
+.simplebar-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.sidebar {
+    top: 112px !important;
+    z-index: 100 !important;
+}
+header {
+    z-index: 1000 !important;
+}

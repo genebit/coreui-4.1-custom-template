@@ -1,131 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-		<!-- Main styles-->
-		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="./css/site.css" />
+        <!-- Vendors styles-->
+        <link rel="stylesheet" href="../plugins/simplebar/dist/simplebar.css" />
+        
+        <!-- Main styles-->
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/site.css" />
 
-		<link rel="stylesheet" href="../plugins/coreui-comp/icons/css/all.min.css" />
+        <link rel="stylesheet" href="../plugins/coreui-comp/icons/css/all.min.css" />
 
-		<!-- Jquery -->
-		<script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+        <!-- Jquery -->
+        <script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
 
-		<!-- Core UI Scripts -->
-		<script defer src="../plugins/coreui-comp/coreui/dist/js/coreui.bundle.js"></script>
-		<script defer src="../plugins/simplebar/dist/simplebar.min.js"></script>
-		<script defer src="../plugins/coreui-comp/utils/dist/coreui-utils.js"></script>
-	</head>
-	<body>
-		<header class="header shadow-sm">
-			<div class="container-fluid">
-				<button class="header-toggler" type="button" id="nav-toggler">
-					<i class="cil-hamburger-menu"></i>
-				</button>
-				<ul class="header-nav d-md-flex">
-					<li class="nav-item">
-						<input class="form-control form-control-sm" type="search" placeholder="Search" />
-					</li>
-				</ul>
-				<ul class="header-nav ms-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="icon icon-lg cil-bell"></i>
-						</a>
-					</li>
-				</ul>
-				<ul class="header-nav ms-3">
-					<li class="nav-item dropdown">
-						<a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-							<div class="avatar">
-								<img class="avatar-img" src="../assets/avatars/user1.PNG" alt="" />
-							</div>
-							<span>Bruno Nash</span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-end pt-0">
-							<div class="dropdown-header bg-light py-2">
-								<div class="fw-semibold">Account</div>
-							</div>
-							<a class="dropdown-item" href="#"> Updates<span class="badge badge-sm bg-info ms-2">42</span></a
-							><a class="dropdown-item" href="#"> Messages<span class="badge badge-sm bg-success ms-2">42</span></a
-							><a class="dropdown-item" href="#"> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a
-							><a class="dropdown-item" href="#"> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
-							<div class="dropdown-header bg-light py-2">
-								<div class="fw-semibold">Settings</div>
-							</div>
-							<a class="dropdown-item" href="#"> Profile</a><a class="dropdown-item" href="#"> Settings</a><a class="dropdown-item" href="#"> Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a>
-							<a class="dropdown-item" href="#"> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#"> Lock Account</a><a class="dropdown-item" href="#"> Logout</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="header-divider"></div>
-			<div class="container-fluid">
-				<nav style="--cui-breadcrumb-divider: '/'" aria-label="breadcrumb">
-					<ol class="breadcrumb my-0 ms-2">
-						<li class="breadcrumb-item">
-							<span>Home</span>
-						</li>
-						<li class="breadcrumb-item active"><span>Dashboard</span></li>
-					</ol>
-				</nav>
-			</div>
-		</header>
-		<div class="wrapper d-flex flex-row bg-light">
-			<div class="sidebar sidebar-dark min-vh-100" id="sidebar">
-				<ul class="sidebar-nav" data-coreui="navigation">
-					<li class="nav-item">
-						<a class="nav-link" href="/">
-							<i class="nav-icon cil-gauge"></i>
-							Dashboard
-						</a>
-					</li>
-
-					<li class="nav-title">TITLE 3</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/">
-							<i class="nav-icon cil-double-quote-sans-left"></i>
-							About
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/">
-							<i class="nav-icon cil-address-book"></i>
-							Contacts
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/">
-							<i class="nav-icon cil-book"></i>
-							Resources
-						</a>
-					</li>
-				</ul>
-			</div>
-			<main class="main p-3">
-				molestiae commodi, cum fuga temporibus sed in aspernatur aperiam sequi velit consectetur a consequuntur nostrum est. Ut odio vitae consectetur? Aliquid maiores eaque dignissimos dicta totam commodi fugiat libero. Iusto quisquam eius, cum vel explicabo et libero corporis impedit veritatis odit non harum natus adipisci aliquid nobis alias recusandae. Commodi dolorem ab veritatis atque pariatur. Maxime omnis ab minus eos ullam, placeat, tenetur nihil molestiae nesciunt nemo vitae
-				aspernatur culpa sint cupiditate ad, neque voluptatem perspiciatis voluptatum animi voluptates deleniti error cum nam! Reiciendis velit, quaerat recusandae tempora repudiandae deserunt minus error amet sequi beatae eius eligendi ipsam alias. Ratione earum modi dolorum consequuntur?
-			</main>
-		</div>
-		<script>
-			$("#nav-toggler").click(() => {
-				if ($(window).width() < 768) {
-					coreui.Sidebar.getInstance($("#sidebar")).toggle()
-					return
-				}
-				$("#sidebar").hasClass("hide") ? coreui.Sidebar.getInstance($("#sidebar")).show() : coreui.Sidebar.getInstance($("#sidebar")).hide()
-			})
-		</script>
-	</body>
+        <!-- Core UI Scripts -->
+        <script defer src="../plugins/coreui-comp/coreui/dist/js/coreui.bundle.js"></script>
+        <script defer src="../plugins/simplebar/dist/simplebar.min.js"></script>
+        <script defer src="../plugins/coreui-comp/utils/dist/coreui-utils.js"></script>
+    </head>
+    <body>
+        <header class="header header-sticky mb-4 shadow-sm">
+            <div class="container-fluid">
+                <button class="header-toggler" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+                    <i class="cil-hamburger-menu"></i>
+                </button>
+                <a class="header-brand" href="#"></a>
+                <ul class="header-nav d-md-flex">
+                    <li class="nav-item">
+                        <input class="form-control" type="search" placeholder="Search" />
+                    </li>
+                </ul>
+                <ul class="header-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon icon-lg cil-bell"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="header-nav ms-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="avatar">
+                                <img class="avatar-img" src="../assets/avatars/user1.PNG" alt="" />
+                            </div>
+                            <span>Bruno Nash</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end pt-0">
+                            <div class="dropdown-header bg-light py-2">
+                                <div class="fw-semibold">Account</div>
+                            </div>
+                            <a class="dropdown-item" href="#"> Updates<span class="badge badge-sm bg-info ms-2">42</span></a
+                            ><a class="dropdown-item" href="#"> Messages<span class="badge badge-sm bg-success ms-2">42</span></a
+                            ><a class="dropdown-item" href="#"> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a
+                            ><a class="dropdown-item" href="#"> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
+                            <div class="dropdown-header bg-light py-2">
+                                <div class="fw-semibold">Settings</div>
+                            </div>
+                            <a class="dropdown-item" href="#"> Profile</a><a class="dropdown-item" href="#"> Settings</a><a class="dropdown-item" href="#"> Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a>
+                            <a class="dropdown-item" href="#"> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"> Lock Account</a><a class="dropdown-item" href="#"> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-divider"></div>
+            <div class="container-fluid">
+                <nav style="--cui-breadcrumb-divider: url(&#34;data:image/svg + xml, %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='gray'/%3E%3C/svg%3E&#34;)" aria-label="breadcrumb">
+                    <ol class="breadcrumb my-0 ms-2">
+                        <li class="breadcrumb-item">
+                            <span>Home</span>
+                        </li>
+                        <li class="breadcrumb-item active"><span>Dashboard</span></li>
+                    </ol>
+                </nav>
+            </div>
+        </header>
+        <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+            <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon cil-gauge"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-title">TITLE 1</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-icon cil-user"></i>
+                        Employees
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-icon cil-building"></i>
+                        Department
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-icon cil-location-pin"></i>
+                        Designation
+                    </a>
+                </li>
+                <li class="nav-title">TITLE 2</li>
+                <li class="nav-group">
+                    <a class="nav-link nav-group-toggle" href="#">
+                        <i class="nav-icon cil-filter"></i>
+                        Miscellaneous
+                    </a>
+                    <ul class="nav-group-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Option A</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Option B</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Option C</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Option D</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-title">TITLE 3</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-icon cil-double-quote-sans-left"></i>
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-icon cil-address-book"></i>
+                        Contacts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-icon cil-book"></i>
+                        Resources
+                    </a>
+                </li>
+            </ul>
+            <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+        </div>
+        <div class="wrapper d-flex flex-column">
+            <main class="main">
+                <div class="container">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis error dignissimos aspernatur tempore numquam illo. Vero saepe optio voluptas reprehenderit tempore consequatur nulla ab architecto quasi ea necessitatibus in cum aperiam consequuntur voluptatem, suscipit maiores. Quod doloribus repellendus facilis accusantium illum nihil dignissimos nesciunt veniam quas quam eius labore hic excepturi molestiae consectetur laboriosam in aliquid voluptates, ea quo rem? Quaerat at tempore architecto accusamus assumenda cupiditate nemo inventore, officiis, fugiat eius dolorum! Obcaecati itaque eligendi sit reprehenderit commodi temporibus facilis dolores ratione molestias. Iste adipisci, eveniet, impedit debitis doloribus nesciunt corrupti minima id nihil assumenda architecto incidunt, est vero blanditiis voluptas necessitatibus aut explicabo eum quaerat. Debitis aut perspiciatis accusantium sed sequi commodi vero enim labore autem est consequuntur dolorum quis, nemo non sapiente hic aliquam vitae laborum eligendi quibusdam possimus ipsum necessitatibus earum maxime! Recusandae laudantium officiis, quibusdam quam odit, expedita consectetur aliquid repellat sunt atque, maxime optio? Vero, corporis iusto quas cupiditate animi fuga omnis alias molestias voluptate eum quasi quidem ut explicabo sit sapiente vel. Praesentium esse amet excepturi magnam debitis aut labore porro commodi laudantium facilis, sunt earum officia quisquam, totam quaerat maiores doloribus officiis assumenda sequi voluptatum. Unde inventore illo tenetur recusandae at, minima ratione natus laboriosam pariatur aut hic sapiente, eius perspiciatis deleniti nobis est reprehenderit quasi neque sint tempore id. Labore id eaque laborum veniam facere! Quo totam aperiam, neque necessitatibus, vero pariatur quidem maxime officia nihil iste ipsam esse, possimus quas aliquid. Numquam quos voluptatem illo explicabo aperiam officiis sint quasi, quisquam quod dolores ducimus dolorum, possimus perferendis, voluptatum id doloremque? Rerum et maxime consequuntur iste? Quia dignissimos natus optio voluptas quidem est maiores, recusandae aliquid provident quos! Voluptatem libero totam culpa, cum dolorem autem, sunt saepe tenetur veniam optio nam reprehenderit accusamus vero enim laboriosam. Quaerat ipsam praesentium neque quis, expedita nesciunt repellat quidem asperiores at ullam voluptates facilis nobis explicabo impedit dicta minima placeat, esse id aspernatur totam ea ab! Enim, itaque quidem voluptate modi qui tempore nam illum est natus architecto unde id mollitia animi error porro dolorum velit facere consectetur cupiditate maiores. Eius veniam distinctio libero, quis officiis culpa ratione ab nam praesentium hic alias similique debitis asperiores nihil at totam, dolor quod temporibus! Quibusdam, ipsa nihil sapiente cumque soluta, temporibus quos cum ullam labore aut eum dolores quaerat quasi rem aliquam hic eligendi, sit ipsam nulla. Qui fuga itaque autem cumque deleniti, atque, repudiandae maxime illum, ipsa quis ipsum. Similique, sapiente rerum! Rerum soluta iure consequuntur amet recusandae! Quo iusto fuga corporis nesciunt rem doloribus nam quod velit? Fugit deserunt culpa eum, cupiditate assumenda sed praesentium perspiciatis! Quia laborum iusto, iste quidem hic sit ratione ipsam sapiente velit assumenda autem maiores voluptatibus inventore! Nemo, quis in. Dolores amet, corporis excepturi doloribus eius debitis, quas deleniti quis, unde quae accusantium. Deleniti, ducimus exercitationem nam accusamus quidem velit id sed ullam iure alias iste quaerat, consectetur officia quos harum qui magnam sint dolore quod dolor ratione magni voluptatibus culpa ab! Dicta ipsa praesentium doloremque, commodi porro, impedit ea ipsam sunt maxime reprehenderit labore sint necessitatibus odio obcaecati iste laudantium odit perspiciatis perferendis repellat cumque minima! Illum suscipit dolorum tempora sed, quisquam atque quia debitis sequi ut laudantium hic, aspernatur at molestias fugit obcaecati aliquid perferendis aliquam cumque beatae! Sunt officiis qui asperiores voluptatibus laborum vel molestias in nam voluptas quo. Rem voluptatum perferendis in illo assumenda ratione, laudantium consequatur libero reiciendis autem molestias sunt qui. Deserunt possimus praesentium repudiandae necessitatibus perspiciatis ducimus mollitia perferendis similique doloribus consectetur a in, quo dolorem, velit fugit dolor numquam hic adipisci esse quaerat ut, libero maxime porro eligendi? Voluptas doloribus asperiores expedita porro dignissimos, voluptatem perspiciatis maxime in, necessitatibus culpa omnis ullam rerum perferendis molestias! Libero eligendi facere mollitia quia aliquid nobis officiis minima, voluptatem nisi magni minus id sint repudiandae doloribus voluptatum alias ab asperiores dolore officia velit fugiat. Hic vero, delectus earum rerum repellat aliquid incidunt assumenda doloribus. Nesciunt dolor maxime at recusandae obcaecati provident velit libero, exercitationem consequatur est magnam aperiam, aliquam, alias excepturi autem saepe? Officia corrupti esse sit quia. Sapiente nam cupiditate quod quas, temporibus libero laborum illo, sint maxime earum provident velit voluptatum tempora alias beatae, mollitia veritatis aut laboriosam? Autem quod tempora sapiente suscipit tempore voluptas illo, illum nemo officiis asperiores nihil quisquam inventore doloremque quia quidem architecto ea et, saepe modi explicabo in! Quos omnis delectus saepe laboriosam ea, dolorum corporis vel necessitatibus voluptatum fuga temporibus laborum sit eos ipsam quasi, distinctio similique, porro tempore nihil consequatur veritatis odio? Quibusdam tenetur possimus quis tempore dignissimos ratione iste dolores libero deserunt perspiciatis incidunt, veritatis numquam nihil iure, ea placeat et quod corporis saepe assumenda! Modi accusantium in voluptatibus recusandae et porro, officiis nesciunt, perferendis esse cupiditate adipisci voluptatum corporis facilis voluptas, id ipsam fugiat velit repellat fuga! Eaque numquam nostrum ea laboriosam nihil ab obcaecati ex voluptatibus, repellat voluptate laudantium rerum, sequi maxime modi quibusdam similique, earum rem dicta! Nulla, error cum ipsam neque dolorum ratione harum delectus, nam optio animi aut qui nemo porro, quis totam pariatur id doloremque laboriosam corporis eveniet eligendi ullam quos praesentium distinctio. Incidunt cum repellendus, fuga odit totam sequi modi dolorem eum numquam sunt atque nobis eveniet ut unde. Modi quia quas unde deserunt, nam neque nihil quaerat molestiae! Laudantium facilis quidem sapiente ut rem non explicabo voluptatem vitae aliquam, iure quas asperiores excepturi consequatur deserunt perspiciatis eius? Facilis corporis veritatis, ad placeat aperiam dicta odio quas sunt deleniti mollitia. Ex similique dignissimos tenetur exercitationem, incidunt aliquam doloribus perferendis officiis labore dolores ea nihil tempore accusantium aut excepturi in. Veniam hic neque vel totam assumenda inventore reiciendis rem illum recusandae laboriosam natus labore, quisquam incidunt commodi praesentium ea ipsam eum maxime ducimus, a minima temporibus ut deleniti! Hic exercitationem distinctio suscipit rem natus sint ad expedita amet dolorem nihil ea modi temporibus iure nesciunt maxime sunt reiciendis quisquam ullam, aut atque odit. Maxime, facilis placeat. Magni harum enim a tempore nihil, alias nostrum nisi odio doloribus deleniti obcaecati assumenda autem necessitatibus repellendus repudiandae incidunt, perferendis animi ipsa ipsum. Quidem.
+                </div>
+            </main>
+            
+    </body>
 </html>

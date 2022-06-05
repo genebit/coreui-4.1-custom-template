@@ -36,7 +36,7 @@
 
     --scrollbar-border-radius: 2px;
     --scrollbar-width-height: 7px;
-    --sidebar-scrollbar-color: #a1a1a1;
+    --sidebar-scrollbar-color: #a1a1a148;
 }
 
 ::-webkit-scrollbar {
